@@ -1,7 +1,7 @@
 # dynamic-role-filter
 
 ## Description
-A DynamicFeature and filter to allow the @RolesAllowed annotation to accept substitutions (similar to how you can get path params from the @Path annotation).
+A DynamicFeature and filter to allow the @RolesAllowed annotation to accept substitutions from PathParam, QueryParam and HeaderParam (similar to how you can get path params from the @Path annotation).
 
 ## Dependency Information
 ```
@@ -27,6 +27,7 @@ and you're all set to go!
 
 ## Example
 This lets you use replacement in your `@RolesAllowed` annotations. For example I have the following resource endpoint:
+# PathParams
 ```
 @GET
 @Path("/users/{userId}")
@@ -51,6 +52,72 @@ However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do i
 ```
 @GET
 @Path("/users/{userId}")
+@RolesAllowed("users:{userId}:read")
+public Response getUser() {
+    return Response.ok().build();
+}
+```
+# QueryParams
+```
+@GET
+@Path("/users")
+@QueryParam("userId")
+public Response getUser() {
+    return Response.ok().build();
+}
+```
+which I want to return a 200 if you're the appropriate user accessing it. With the old `RolesAllowedDynamicFeature` you would have to do the following:
+```
+@GET
+@Path("/users")
+@QueryParam("userId")
+@RolesAllowed("users:read")
+public Response getUser(@Auth final User user,
+                        @PathParam("userId") final String userId) {
+    if (user.getName().equals(userId)) {
+        return Response.ok().build();
+    }
+    return Response.status(403).build();
+}
+```
+However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do is:
+```
+@GET
+@Path("/users")
+@QueryParam("userId")
+@RolesAllowed("users:{userId}:read")
+public Response getUser() {
+    return Response.ok().build();
+}
+```
+# QueryParams
+```
+@GET
+@Path("/users")
+@HeaderParam("userId")
+public Response getUser() {
+    return Response.ok().build();
+}
+```
+which I want to return a 200 if you're the appropriate user accessing it. With the old `RolesAllowedDynamicFeature` you would have to do the following:
+```
+@GET
+@Path("/users")
+@HeaderParam("userId")
+@RolesAllowed("users:read")
+public Response getUser(@Auth final User user,
+                        @PathParam("userId") final String userId) {
+    if (user.getName().equals(userId)) {
+        return Response.ok().build();
+    }
+    return Response.status(403).build();
+}
+```
+However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do is:
+```
+@GET
+@Path("/users")
+@HeaderParam("userId")
 @RolesAllowed("users:{userId}:read")
 public Response getUser() {
     return Response.ok().build();
