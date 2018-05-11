@@ -1,15 +1,41 @@
-# dynamic-role-filter
+# Dropwizard-Dynamic-Role-Filter
 
 ## Description
 A DynamicFeature and filter to allow the @RolesAllowed annotation to accept substitutions from PathParam, QueryParam and HeaderParam (similar to how you can get path params from the @Path annotation).
 
+## Build instructions
+Clone the source:
+```
+git clone https://github.com/sumannewton/dropwizard-dynamic-role-filter.git
+```
+Build
+```
+mvn install
+```
+Repo
+```
+<repository>
+    <id>clojars</id>
+    <name>Clojars repository</name>
+    <url>https://clojars.org/repo</url>
+</repository>
+```
 ## Dependency Information
 ```
 <dependency>
-    <groupId>bng.sumannewton.java</groupId>
-    <artifactId>dynamic-role-filter</artifactId>
+    <groupId>com.sumannewton</groupId>
+    <artifactId>dropwizard-dynamic-role-filter</artifactId>
     <version>1.0</version>
 </dependency>
+```
+
+Leiningen
+```
+[com.sumannewton/dropwizard-dynamic-role-filter "1.0"]
+```
+Gradle
+```
+compile "com.shash:dropwizard-s3var-interpolation-bundle:1.0"
 ```
 
 ## Usage
