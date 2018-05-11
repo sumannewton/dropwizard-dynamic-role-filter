@@ -53,81 +53,71 @@ public class TestResource {
 
     @GET
     @Path("headerparamendpoint/user")
-    @HeaderParam("user")
     @RolesAllowed("user:{user}:write")
-    public Response endpoint6() {
+    public Response endpoint6(@HeaderParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("headerparamendpoint2/user")
-    @HeaderParam("user")
     @RolesAllowed("user:*:read")
-    public Response endpoint7() {
+    public Response endpoint7(@HeaderParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("headerparamendpoint3/user")
-    @HeaderParam("user")
     @RolesAllowed("user:{usar}:read")
-    public Response endpoint8() {
+    public Response endpoint8(@HeaderParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("headerparamendpoint4/user")
-    @HeaderParam("user")
     @PermitAll
-    public Response endpoint9() {
+    public Response endpoint9(@HeaderParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("headerparamendpoint5/user")
-    @HeaderParam("user")
     @DenyAll
-    public Response endpoint10() {
+    public Response endpoint10(@HeaderParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("queryparamendpoint/user")
-    @QueryParam("user")
     @RolesAllowed("user:{user}:write")
-    public Response endpoint11() {
+    public Response endpoint11(@QueryParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("queryparamendpoint2/user")
-    @QueryParam("user")
     @RolesAllowed("user:*:read")
-    public Response endpoint12() {
+    public Response endpoint12(@QueryParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("queryparamendpoint3/user")
-    @QueryParam("user")
     @RolesAllowed("user:{usar}:read")
-    public Response endpoint13() {
+    public Response endpoint13(@QueryParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("queryparamendpoint4/user")
-    @QueryParam("user")
     @PermitAll
-    public Response endpoint14() {
+    public Response endpoint14(@QueryParam("user") final String user) {
         return Response.ok().build();
     }
 
     @GET
     @Path("queryparamendpoint5/user")
-    @QueryParam("user")
     @DenyAll
-    public Response endpoint15() {
+    public Response endpoint15(@QueryParam("user") final String user) {
         return Response.ok().build();
     }
 
