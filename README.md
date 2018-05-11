@@ -79,7 +79,7 @@ However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do i
 @GET
 @Path("/users/{userId}")
 @RolesAllowed("users:{userId}:read")
-public Response getUser() {
+public Response getUser(@PathParam("userId") final String userId) {
     return Response.ok().build();
 }
 ```
@@ -96,10 +96,9 @@ which I want to return a 200 if you're the appropriate user accessing it. With t
 ```
 @GET
 @Path("/users")
-@QueryParam("userId")
 @RolesAllowed("users:read")
 public Response getUser(@Auth final User user,
-                        @PathParam("userId") final String userId) {
+                        @QueryParam("userId") final String userId) {
     if (user.getName().equals(userId)) {
         return Response.ok().build();
     }
@@ -110,9 +109,8 @@ However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do i
 ```
 @GET
 @Path("/users")
-@QueryParam("userId")
 @RolesAllowed("users:{userId}:read")
-public Response getUser() {
+public Response getUser(@QueryParam("userId") final String userId) {
     return Response.ok().build();
 }
 ```
@@ -132,7 +130,7 @@ which I want to return a 200 if you're the appropriate user accessing it. With t
 @HeaderParam("userId")
 @RolesAllowed("users:read")
 public Response getUser(@Auth final User user,
-                        @PathParam("userId") final String userId) {
+                        @HeaderParam("userId") final String userId) {
     if (user.getName().equals(userId)) {
         return Response.ok().build();
     }
@@ -143,9 +141,8 @@ However, with the `DynamicRolesAllowedDynamicFeature` all you would need to do i
 ```
 @GET
 @Path("/users")
-@HeaderParam("userId")
 @RolesAllowed("users:{userId}:read")
-public Response getUser() {
+public Response getUser(@HeaderParam("userId") final String userI) {
     return Response.ok().build();
 }
 ```
