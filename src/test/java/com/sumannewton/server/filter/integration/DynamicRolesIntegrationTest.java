@@ -1,8 +1,8 @@
-package bng.sumannewton.java.server.filter.integration;
+package com.sumannewton.server.filter.integration;
 
-import bng.sumannewton.java.IntegrationTest;
-import bng.sumannewton.java.dropwizard.TestApplication;
-import bng.sumannewton.java.dropwizard.TestConfiguration;
+import com.sumannewton.IntegrationTest;
+import com.sumannewton.dropwizard.TestApplication;
+import com.sumannewton.dropwizard.TestConfiguration;
 import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.testing.junit.DropwizardAppRule;
 import org.glassfish.jersey.internal.util.Base64;

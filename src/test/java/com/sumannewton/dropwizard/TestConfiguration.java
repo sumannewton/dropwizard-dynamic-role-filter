@@ -1,4 +1,4 @@
-package bng.sumannewton.java.dropwizard;
+package com.sumannewton.dropwizard;
 
 import io.dropwizard.Configuration;
 

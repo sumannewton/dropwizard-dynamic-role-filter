@@ -1,8 +1,8 @@
-package bng.sumannewton.java.server.filter.unit;
+package com.sumannewton.server.filter.unit;
 
-import bng.sumannewton.java.server.filter.DynamicRoleFilter;
-import bng.sumannewton.java.server.filter.DynamicRolesDynamicFeature;
-import bng.sumannewton.java.UnitTest;
+import com.sumannewton.server.filter.DynamicRoleFilter;
+import com.sumannewton.server.filter.DynamicRolesDynamicFeature;
+import com.sumannewton.UnitTest;
 import lombok.SneakyThrows;
 import org.junit.After;
 import org.junit.Before;

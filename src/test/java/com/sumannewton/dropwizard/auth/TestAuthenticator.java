@@ -1,4 +1,4 @@
-package bng.sumannewton.java.dropwizard.auth;
+package com.sumannewton.dropwizard.auth;
 
 import io.dropwizard.auth.AuthenticationException;
 import io.dropwizard.auth.Authenticator;

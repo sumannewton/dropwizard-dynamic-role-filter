@@ -1,4 +1,4 @@
-package bng.sumannewton.java.server.filter;
+package com.sumannewton.server.filter;
 
 import org.glassfish.jersey.server.internal.LocalizationMessages;
 

@@ -1,10 +1,10 @@
-package bng.sumannewton.java.dropwizard;
+package com.sumannewton.dropwizard;
 
-import bng.sumannewton.java.dropwizard.auth.TestAuthenticator;
-import bng.sumannewton.java.dropwizard.auth.TestAuthorizer;
-import bng.sumannewton.java.dropwizard.auth.TestUser;
-import bng.sumannewton.java.dropwizard.rest.TestResource;
-import bng.sumannewton.java.server.filter.DynamicRolesDynamicFeature;
+import com.sumannewton.dropwizard.auth.TestAuthenticator;
+import com.sumannewton.dropwizard.auth.TestAuthorizer;
+import com.sumannewton.dropwizard.auth.TestUser;
+import com.sumannewton.dropwizard.rest.TestResource;
+import com.sumannewton.server.filter.DynamicRolesDynamicFeature;
 import io.dropwizard.Application;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.basic.BasicCredentialAuthFilter;

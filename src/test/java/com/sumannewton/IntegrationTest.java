@@ -1,4 +1,4 @@
-package bng.sumannewton.java;
+package com.sumannewton;
 
 public class IntegrationTest {
 }

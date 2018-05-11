@@ -1,7 +1,7 @@
-package bng.sumannewton.java.server.filter.unit;
+package com.sumannewton.server.filter.unit;
 
-import bng.sumannewton.java.server.filter.DynamicRoleFilter;
-import bng.sumannewton.java.UnitTest;
+import com.sumannewton.server.filter.DynamicRoleFilter;
+import com.sumannewton.UnitTest;
 import lombok.SneakyThrows;
 import lombok.Value;
 import org.junit.Assert;

@@ -1,4 +1,4 @@
-package bng.sumannewton.java.dropwizard.rest;
+package com.sumannewton.dropwizard.rest;
 
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
