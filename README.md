@@ -27,7 +27,7 @@ and you're all set to go!
 
 ## Example
 This lets you use replacement in your `@RolesAllowed` annotations. For example I have the following resource endpoint:
-# PathParams
+### PathParams
 ```
 @GET
 @Path("/users/{userId}")
@@ -57,7 +57,7 @@ public Response getUser() {
     return Response.ok().build();
 }
 ```
-# QueryParams
+### QueryParams
 ```
 @GET
 @Path("/users")
@@ -90,7 +90,7 @@ public Response getUser() {
     return Response.ok().build();
 }
 ```
-# QueryParams
+### HeaderParams
 ```
 @GET
 @Path("/users")
