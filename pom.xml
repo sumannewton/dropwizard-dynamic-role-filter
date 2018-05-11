@@ -9,6 +9,12 @@
     <description>A filter and DynamicFeature to allow for replacements in the RolesAllowed annotation</description>
     <url>https://github.com/sumannewton/dynamic-role-filter.git</url>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <developers>
         <developer>
             <name>Suman</name>
@@ -146,7 +152,7 @@
         </profile>
     </profiles>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>sonatype-oss</id>
             <name>Sonatype OSS</name>
@@ -157,6 +163,6 @@
             <name>Sonatype OSS</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement>-->
 
 </project>
