@@ -35,7 +35,7 @@ Leiningen
 ```
 Gradle
 ```
-compile "com.shash:dropwizard-s3var-interpolation-bundle:1.0"
+compile "com.sumannewton:dropwizard-dynamic-role-filter:1.0"
 ```
 
 ## Usage
